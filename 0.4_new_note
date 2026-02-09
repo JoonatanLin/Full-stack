@@ -1,0 +1,10 @@
+new_note_diagram.md
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: POST /new_note
+    activate server
+    server-->>browser: 302 Redirect to /notes
+    deactivate server
